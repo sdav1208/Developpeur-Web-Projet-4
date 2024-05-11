@@ -1,0 +1,94 @@
+/*=============== IMPORT "VARIABLES" ===============*/
+@import '../utils/variables';
+
+/*=============== PREFERS-COLOR-SCHEME ===============*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $Background-color-body-dark;
+  }
+
+  header {
+    background-color: $Background-color-header-dark;
+  }
+
+  .header__logo--img {
+    filter: invert(100%);
+  }
+  
+  .localisation__container {
+    background-color: $Background-color-local-dark;
+  
+    input[type="text"] {
+      background-color: $Background-color-local-dark;
+      &[placeholder="Paris, Belleville"] {
+        background: white;
+        padding-left: 0.5rem;
+        border-radius: 0.93rem;
+      }
+    }    
+  }
+
+  .info {
+    background-color: $Background-color-body-dark;
+  }
+
+  .fonctionnement {
+    background-color: $Background-color-fonction-dark;
+  }
+
+  .fa-location-dot,
+  .info__title,
+  .fonctionnement__title,
+  .info__text,
+  .fa-solid,
+  li, .fa-heart,
+  .restaurants__title,
+  .card__restaurant--title,
+  .restaurant__card--title2,
+  .card__restaurant--subtitle,
+  .card__restaurant--icon,
+  .restaurant__page--title,
+  .restaurant__card--title,
+  .restaurant__page--icon,
+  .restaurant__card--subtitle,
+  .restaurant__card--description,
+  .restaurant__card--price,
+  .footer__title,
+  .footer__list {
+    color: $Color-typo;
+  }
+
+  .button-form__link, .card, .restaurant__card--info  {
+    background-color: $Background-color-card-info;
+  }
+
+  .restaurant {
+    background-color: $Background-color-fonction-dark;
+  }
+  
+  .restaurant__page--headline,
+  .restaurant__background--card,
+  .restaurant__block--menu {
+    background-color: $Background-color-body-dark;
+  }
+
+  .button-form__link:hover, .restaurant__card--info:hover,
+  .card:hover {
+    box-shadow: 0 0.25rem 1.25rem $Color-shadows3-button;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $Scrollbar-color4;
+  }
+
+  .info__button:hover,
+  .restaurant__button-order:hover {
+    background: linear-gradient(
+        0deg,
+        $Color-hover-button 0%,
+        $Color-hover-button 100%
+      ),
+      linear-gradient(201deg, $Primary-color -5.2%, $Secondary-color 110.74%);
+    box-shadow: 0 0.25rem 0.93rem 0 $Color-shadows3-button;
+  }
+}

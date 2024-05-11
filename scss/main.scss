@@ -1,0 +1,26 @@
+/*=============== IMPORT BASE ===============*/
+    @import './base/base';
+
+/*=============== IMPORT COMPONENTS ===============*/
+    @import './components/animation-restaurant';
+    @import './components/button';
+    @import './components/button-fonction';
+    @import './components/card-index';
+    @import './components/card-restaurant';
+    @import './components/heart-style';
+
+/*=============== IMPORT LAYOUT ===============*/
+    @import './layout/loader';
+    @import './layout/header';
+    @import './layout/footer';
+
+/*=============== IMPORT PAGES ===============*/
+    @import './pages/index';
+    @import './pages/restaurants';
+
+/*=============== PREFERS-COLOR-SCHEME ===============*/
+    @import './theme/prefers-color-scheme';    
+
+/*=============== IMPORT UTILS ===============*/
+    @import './utils/mixins';
+    @import './utils/variables';

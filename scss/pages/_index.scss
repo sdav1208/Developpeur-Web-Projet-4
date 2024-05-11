@@ -1,0 +1,98 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@import '../utils/variables';
+@import '../utils/mixins';
+
+/*=============== INDEX PAGE "LOCALISATION" ===============*/
+.localisation__container {
+  @include flex(row, center, center, 1.06rem);
+  height: 3.12rem;
+  margin: 0 auto;
+  background-color: $Background_color-local;
+
+  input[type="text"] {
+    width: 6.81rem;
+    background-color: $Background-color-local;
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+/*=============== INDEX PAGE "INFORMATION" ===============*/
+.info {
+  text-align: center;
+  @include flex(column, center, center, 0);
+  padding: 2.43rem 0rem 3.68rem 0rem;
+  background-color: $Background-color-info;
+
+  &__title {
+    margin-bottom: 0.75rem;
+    width: calc(100% - 6.25rem);
+    min-width: 17.18rem;
+  }
+
+  &__text {
+    margin-bottom: 1.68rem;
+    width: calc(100% - 3.75rem);
+    min-width: 19.68rem;
+  }
+}
+
+/*=============== INDEX PAGE "FONCTIONNEMENT" ===============*/
+.fonctionnement {
+  @include flex($direction: column, $gap: 1.62rem);
+  padding: 3rem 1.25rem 4.25rem 1.25rem;
+  background-color: $Background-color-fonction;
+  @include desktop {
+    @include flex($direction: column, $align: center, $gap: 1.56rem);
+  }
+
+  &__title {
+    @include desktop {
+      width: 100%;
+      max-width: calc(3 * 20.93rem + 2 * 1.5rem);
+    }
+  }
+
+  &__buttons {
+    font-family: $Body-font-text;
+    font-weight: $Font-size-big;
+    @include flex($direction: column, $gap: 1.56rem);
+    @include desktop {
+      @include flex($direction: row, $justify: center, $gap: 1.5rem);
+      width: calc(100%);
+    }
+  }
+}
+
+/*=============== INDEX PAGE "RESTAURANTS" ===============*/
+/* Style de l'ensemble de la section restaurants */
+.restaurants {
+  @include flex(column, center, center, 1.62rem);
+  padding: 3.37rem 1.09rem 4.12rem 1.09rem;
+  @include desktop {
+    padding-top: 1.87rem;
+  }
+
+  /* Style du titre de la section "Restaurants" */
+  &__title {
+    padding-left: 0.18rem;
+    width: 100%;
+    max-width: 67.5rem;
+  }
+
+  /* Style de l'ensemble du conteneur regroupant toutes les cards */
+  &__block--container {
+    @include flex(row, center, center, 1.12rem);
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 67.5rem;    
+    @include tablet {
+      gap: 1.25rem;
+    }
+    @include desktop {
+      justify-content: space-between;
+      gap: 3.12rem;
+    }
+  }
+}

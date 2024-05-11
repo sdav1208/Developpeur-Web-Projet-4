@@ -1,0 +1,39 @@
+/*=============== IMPORT "VARIABLES" ===============*/
+@import './variables';
+
+/*=============== MIXIN ===============*/
+
+    /*========== Flexbox ==========*/
+    @mixin flex(
+      $direction: initial,
+      $justify: initial,
+      $align: initial,
+      $gap: initial
+      ) {
+      display: flex;
+      flex-direction: $direction;
+      justify-content: $justify;
+      align-items: $align;
+      gap: $gap;
+    }
+
+    /*========== Media Queries ==========*/
+    /* Landon Schropp’s technique 
+     Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
+    @mixin tablet {
+      @media (min-width: #{$Tablet-width}) {
+        @content;
+      }
+    }
+
+    @mixin desktop {
+      @media (min-width: #{$Desktop-width}) {
+        @content;
+      }
+    }
+
+    @mixin large-desktop {
+      @media (min-width: #{$Large-desktop-width}) {
+        @content;
+      }
+    }

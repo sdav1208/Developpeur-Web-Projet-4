@@ -1,0 +1,92 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@import "../utils/variables";
+@import "../utils/mixins";
+
+/*=============== MENU (Restaurants pages)===============*/
+/* Style appliqué à l'entièreté de la page restaurant */
+.restaurant {
+  font-style: normal;
+  line-height: normal;
+  background-color: white;
+
+  /* Style de redimensionnement de l'image de la page restaurant */
+  &__img {
+    object-fit: cover;
+    height: 17.1rem;
+    width: 100%;
+  }
+
+  /* Style du titre <h1> et de l'icon de la page restaurant */
+  &__page--headline {
+    @include flex($justify: space-between);
+    max-width: 65.9rem;
+    position: relative;
+    margin: -2.5rem auto 0 auto;
+    padding: 2rem 3.4vw 0 3.4vw;
+    border-radius: 2.5rem 2.5rem 0 0;
+    z-index: 1;
+    background: $Background-color-body;
+    @include tablet {
+      padding-right: 14rem;
+      padding-left: 14rem;
+    }
+    @include desktop {
+      padding-right: 22.8rem;
+      padding-left: 22.8rem;
+    }
+  }
+
+  /* Style des icônes de la page restaurant */
+  &__block--icons {
+    font-size: 1.37rem;
+    width: 1.5rem;
+  }
+
+  /* Positionnement des icônes de la page restaurant */
+  &__page--icon {
+    position: absolute;
+    line-height: 2.56rem;   
+  }
+
+  /* Style appliqué au contenu du menu "Entrées - Plats - Déserts" */
+  &__block--menu {
+    max-width: 65.9rem;
+    @include flex($direction: column);
+    margin: auto;    
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: $Background-color-body;
+    @include tablet {
+      padding-right: 6.25rem;
+      padding-left: 6.25rem;
+    }
+    @include desktop {
+      padding-right: 13.1rem;
+      padding-left: 13.1rem;
+    }
+  }
+
+  /* Style des grands titres <h2> "Entrées - Plats - Déserts" */
+  &__card--title2 {
+    padding-top: 3rem;
+    font-family: $Body-font-text;
+    font-weight: $Font-size-small;
+    font-size: 1.12rem;
+
+    /* Soulignement en vert des grands titres <h2> "Entrées - Plats - Déserts" */    
+    &::after {
+      justify-self: flex-end;
+      content: "";
+      overflow: visible;
+      width: 3.06rem;
+      height: 0.18rem;
+      display: block;
+      background-color: $Tertiary-color;
+    }
+  }  
+
+  /* Positionnement du bouton "commander" */
+  &__button-order {
+    margin: 2rem auto 2.5rem auto;
+  }
+}
