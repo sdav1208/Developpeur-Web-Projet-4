@@ -3,20 +3,20 @@
 @import "../utils/mixins";
 
 /*=============== MENU (Restaurants pages)===============*/
-/* Style appliqué à l'entièreté de la page restaurant */
+/* Mise en forme  de la page restaurant */
 .restaurant {
   font-style: normal;
   line-height: normal;
   background-color: white;
 
-  /* Style de redimensionnement de l'image de la page restaurant */
+  /* Dimensionnement de l'image de la page restaurant */
   &__img {
     object-fit: cover;
     height: 17.1rem;
     width: 100%;
   }
 
-  /* Style du titre <h1> et de l'icon de la page restaurant */
+  /* Mise en forme du titre <h1> et de l'icone de la page restaurant */
   &__page--headline {
     @include flex($justify: space-between);
     max-width: 65.9rem;
@@ -36,7 +36,7 @@
     }
   }
 
-  /* Style des icônes de la page restaurant */
+  /* Mise en forme des icônes de la page restaurant */
   &__block--icons {
     font-size: 1.37rem;
     width: 1.5rem;
@@ -48,7 +48,7 @@
     line-height: 2.56rem;   
   }
 
-  /* Style appliqué au contenu du menu "Entrées - Plats - Déserts" */
+  /* Mise en forme du menu "Entrées - Plats - Déserts" */
   &__block--menu {
     max-width: 65.9rem;
     @include flex($direction: column);
@@ -66,14 +66,14 @@
     }
   }
 
-  /* Style des grands titres <h2> "Entrées - Plats - Déserts" */
+  /* Mise en forme des  titres <h2> "Entrées - Plats - Déserts" */
   &__card--title2 {
     padding-top: 3rem;
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
     font-size: 1.12rem;
 
-    /* Soulignement en vert des grands titres <h2> "Entrées - Plats - Déserts" */    
+    /* Mise en forme (Soulignement en vert) des  titres <h2> "Entrées - Plats - Déserts" */    
     &::after {
       justify-self: flex-end;
       content: "";

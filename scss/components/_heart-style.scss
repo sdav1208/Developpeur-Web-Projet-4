@@ -1,7 +1,7 @@
 /*=============== IMPORT "VARIABLES / MIXINS" ===============*/
 @import '../utils/variables';
 
-/*=============== HEART STYLE ===============*/
+/*=============== HEART  ===============*/
 /* Déclaration de "dégradé de couleur" */
 %color-heart {
   background: linear-gradient($Primary-color, $Secondary-color);
@@ -15,23 +15,23 @@
   display: none;
 }
 
-/* Taille des icônes de cœur */
+/* Taille des icônes de HEART */
 .fa-heart  {
   width: 1.62rem;
   font-size: 1.5rem;
 }
 
-/* Couleur du cœur au survole de l'élément */
+/* Couleur du HEART au survol de l'élément */
 .far:hover {
   @extend %color-heart;
 }
 
-/* Couleur du cœur une fois cliqué */
+/* Couleur du HEART quand cliqué */
 .fas {
   @extend %color-heart;
 }
 
-/* Les actions aux cliques des icônes de cœur */
+/* Les actions aux cliques des icônes de HEART */
 .heart input:not(:checked) + label > i.far{
   display: block;
   cursor: pointer;

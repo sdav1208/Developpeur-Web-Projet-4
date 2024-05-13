@@ -66,7 +66,7 @@
 }
 
 /*=============== INDEX PAGE "RESTAURANTS" ===============*/
-/* Style de l'ensemble de la section restaurants */
+/* Mise en forme de la section restaurants */
 .restaurants {
   @include flex(column, center, center, 1.62rem);
   padding: 3.37rem 1.09rem 4.12rem 1.09rem;
@@ -74,14 +74,14 @@
     padding-top: 1.87rem;
   }
 
-  /* Style du titre de la section "Restaurants" */
+  /* Mise en forme du titre de la section "Restaurants" */
   &__title {
     padding-left: 0.18rem;
     width: 100%;
     max-width: 67.5rem;
   }
 
-  /* Style de l'ensemble du conteneur regroupant toutes les cards */
+  /* Mise en forme d du container des cards */
   &__block--container {
     @include flex(row, center, center, 1.12rem);
     flex-wrap: wrap;

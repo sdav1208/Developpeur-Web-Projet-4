@@ -12,11 +12,10 @@
   z-index: 2;
   border-radius: 0.31rem;
   animation: loading 300ms forwards;
-  animation-delay: 3s;
+  animation-delay: 1.5s;
   transform-origin: center; 
 
-  /* Style d'arrière plan du loader 
-  source : https://youtu.be/3HRvb2tLqF4?si=dAvqkS3wlmoNzTr4 */
+  /* Mise en forme arrière plan du loader  */
   &__background--glass {
     height: 100vh;
     width: 100vw;
@@ -32,8 +31,7 @@
     box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
   }
 
-  /* Style des cercles
-  source : https://youtu.be/U3hCPkV9SnU?si=dl3_HEngwzSLMRHx */
+  /* Mise en forme des cercles */
   &__circle {
     margin: auto;
     width: 15.6rem;
@@ -41,7 +39,7 @@
     border-radius: 50%;
     border: 0.43rem solid transparent;
     border-top-color: $Primary-color;
-    animation: circle 2s linear infinite;
+    animation: circle 1s linear infinite;
   }
 
   &__circle::before,
@@ -58,7 +56,7 @@
     right: 0.62rem;
     bottom: 0.62rem;
     border-top-color: $Secondary-color;
-    animation: circle 3s linear infinite;
+    animation: circle 1s linear infinite;
   }
 
   &__circle::after {
@@ -67,12 +65,12 @@
     right: 1.56rem;
     bottom: 1.56rem;
     border-top-color: $Tertiary-color;
-    animation: circle 1.5s linear infinite;
+    animation: circle 1s linear infinite;
   }
 }
 
 /*=============== KEYFRAMES LOADER ===============*/
-/* Processus d'animation des cercles */
+/* Animation des cercles */
 @keyframes circle {
   0% {
     transform: rotate(0deg);
@@ -82,7 +80,7 @@
   }
 }
 
-/* Processus d'animation d'arrière plan du loader "background glass" */
+/* Animation d'arrière plan du loader "background glass" */
 @keyframes loading {
   0% {
     transform: scale(1);
