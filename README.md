@@ -1,1 +1,1 @@
-Projet 4 du parcours de Développeur Web 
+Projet 4 du parcours de Développeur Intégrateur Web chez OpenClassrooms
