@@ -53,8 +53,11 @@ h1,
   font-family: Shrikhand;
 }
 
-h2, .info__title, .info__button,
-p, .footer__list {
+h2,
+.info__title,
+.info__button,
+p,
+.footer__list {
   font-family: Roboto;
 }
 
@@ -69,7 +72,7 @@ p, .footer__list {
 .restaurant__button-order {
   cursor: pointer;
   color: white;
-  padding: 13px 35px ;
+  padding: 13px 35px;
   /* font-weight: 500; */
   flex-shrink: 0;
   border-radius: 1.56rem;
@@ -100,6 +103,11 @@ p, .footer__list {
   counter-increment: nbButton;
   width: 100%;
 }
+
+.button-form__link:hover .button-form__icon {
+  color: #9356DC
+}
+
 
 @media (min-width: 1024px) {
   .button-form {
@@ -143,6 +151,7 @@ p, .footer__list {
   box-shadow: 0rem 0.25rem 0.9rem rgba(0, 0, 0, 0.15);
   transition: box-shadow, border, background-color, 0.5s;
 }
+
 /*=============== MISE EN FORME DE LA LOCALISATION   ===============*/
 .localisation__container {
   display: flex;
@@ -389,20 +398,23 @@ p, .footer__list {
   margin-top: 1rem;
   border-radius: 0.9rem;
   width: 100%;
-  height: 4rem;   /* modifier 5rem*/
+  height: 4rem;
+  /* modifier 5rem*/
   background-color: white;
   box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: box-shadow, transform, 0.5s;
 }
 
+.restaurant__card--info:hover .restaurant__card--animation {
+  width: 3em;
+}
+
 .restaurant__card--info:hover {
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.35);
 }
 
-.restaurant__card--info:hover .restaurant__card--price {
-  transform: translateX(0rem);
-}
+/* .restaurant__card--info:hover .restaurant__card--price {} */
 
 .restaurant__card--info:hover .restaurant__card--price .restaurant__card--animation {
   background-color: #99E2D0;
@@ -415,24 +427,30 @@ p, .footer__list {
 
 .restaurant__card--info .restaurant__card--content {
   border-radius: 0.9rem;
-  padding-left: 0.7rem;
-  padding-bottom: 0.7rem;
-  
+  padding: 0.7rem 0 0.7rem 0.7rem;
+  /* flex: 1; */
+  overflow: hidden;
 }
 
 .restaurant__card--info .restaurant__card--content .restaurant__card--title {
-  margin-top: 0.75rem;
-  padding-right: 1.87rem;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
   font-family: Roboto;
   font-weight: 500;
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .restaurant__card--info .restaurant__card--content .restaurant__card--subtitle {
-  padding-top: 0.3rem;  
+  padding-top: 0.3rem;
   font-family: Roboto;
   font-weight: 300;
-  font-size: 1rem; 
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  overflow: hidden;
 }
 
 .restaurant__card--info .restaurant__card--price {
@@ -441,10 +459,7 @@ p, .footer__list {
   justify-content: initial;
   align-items: center;
   gap: initial;
-  width: 6.25rem;
   height: 100%;
-  transform: translateX(3.12rem);
-  transition: all 0.4s;
 }
 
 .restaurant__card--info .restaurant__card--price p {
@@ -458,8 +473,9 @@ p, .footer__list {
   justify-content: center;
   align-items: center;
   gap: initial;
-  width: 100%;
+  width: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 .restaurant__card--info .restaurant__card--price span .fa-circle-check {
@@ -469,7 +485,8 @@ p, .footer__list {
 }
 
 /*==================== MISE EN FORME DU HEART =================*/
-.fas, .far:hover {
+.fas,
+.far:hover {
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
@@ -488,20 +505,20 @@ p, .footer__list {
 }
 
 /* **** CHANGEMENT D ETAT QUAND CLICK SUR HEART **** */
-.heart input:not(:checked) + label > i.far {
+.heart input:not(:checked)+label>i.far {
   display: block;
   cursor: pointer;
 }
 
-.heart input:checked + label > i.far {
+.heart input:checked+label>i.far {
   display: none;
 }
 
-.heart input:not(:checked) + label > i.fas {
+.heart input:not(:checked)+label>i.fas {
   display: none;
 }
 
-.heart input:checked + label > i.fas {
+.heart input:checked+label>i.fas {
   display: block;
   cursor: pointer;
 }
@@ -521,30 +538,26 @@ header {
   padding: 0.87rem 5.56rem 0.81rem 1.06rem;
   margin-left: 5rem;
 }
-  .header__restaurant{
+
+.header__restaurant {
   display: flex;
   flex-direction: initial;
   align-items: center;
   height: 3.94rem;
   position: relative;
   justify-content: center;
-  gap:initial
-}  
-.header__restaurant--arrow {                    /*  remplacer nav par restaurant */
-  /* display: flex;
-  flex-direction: initial;
-  justify-content: center;
-  align-items: center;
-  gap: initial; */
- 
-  position: absolute;
-  left: 1.0625rem;
-  top:1.0625rem;
-  font-size:1.5rem;
- 
+  gap: initial
 }
 
-.header__restaurant--arrow:hover {   /*  remplacer nav par restaurant */
+.header__restaurant--arrow {
+  position: absolute;
+  left: 1.0625rem;
+  top: 1.0625rem;
+  font-size: 1.5rem;
+
+}
+
+.header__restaurant--arrow:hover {
   transition: 0.3s;
   font-size: 1.9rem;
 }
@@ -583,13 +596,8 @@ footer .footer__content {
     justify-content: initial;
     align-items: flex-end;
     gap: 0;
-    /* height: 7.12rem; */
     padding: 1.85rem 1rem;
   }
-
-  /* footer .footer__content address .footer__link {
-     width: 6.25rem; 
-  } */
 }
 
 @media (min-width: 1024px) {
@@ -742,7 +750,7 @@ footer .footer__link:hover {
   font-size: 1.12rem;
 }
 
-  /* Pour souligner  en vert les titres  "ENTREES - PLATS - DESSERTS" */
+/* Pour souligner  en vert les titres  "ENTREES - PLATS - DESSERTS" */
 .restaurant__card--title2::after {
   justify-self: flex-end;
   content: "";
@@ -773,6 +781,7 @@ footer .footer__link:hover {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #ab7ce4;
 }
+
 /*=============== ANIMATION DU CONTENU DE LA PAGE RESTAURANT ===============*/
 .restaurant__card--title2 {
   animation: fade-in 2s ease-in-out backwards;
@@ -814,6 +823,7 @@ footer .footer__link:hover {
 .restaurant__card--info:nth-of-type(7) {
   animation-delay: 1400ms;
 }
+
 .restaurant__card--info:nth-of-type(6) {
   animation-delay: 1200ms;
 }
@@ -845,6 +855,7 @@ footer .footer__link:hover {
     transform: translatex(100px);
     opacity: 0;
   }
+
   100% {
     transform: translatex(0px);
     opacity: 1;
@@ -856,13 +867,16 @@ footer .footer__link:hover {
   0% {
     background-color: #FF79DA;
   }
+
   51% {
     opacity: 25%;
   }
+
   95% {
     opacity: 15%;
     background-color: #008766;
   }
+
   100% {
     color: inherit;
     opacity: 1;
@@ -909,7 +923,8 @@ footer .footer__link:hover {
   animation: circle 1s linear infinite;
 }
 
-.loader__circle::before, .loader__circle::after {
+.loader__circle::before,
+.loader__circle::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -940,6 +955,7 @@ footer .footer__link:hover {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -950,6 +966,7 @@ footer .footer__link:hover {
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0);
     display: none;
